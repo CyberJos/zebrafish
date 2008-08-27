@@ -34,7 +34,7 @@ package org.zebrafish.chart;
  * @author Max Chu
  * @author Joseph S. Kuo
  * @version $Revision$, $Date$
- * @since 0.1
+ * @since 0.1 
  */
 public class RadarChart extends GoogleChart {
 	private boolean spline;
