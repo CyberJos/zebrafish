@@ -1,5 +1,5 @@
 /*
- * $Id$
+ * $Id: GoogleChart.java 13 2008-08-27 02:52:14Z cyberjos@gmail.com $
  *
  * @(#)GoogleChart.java 2008/5/6
  *  
@@ -41,7 +41,7 @@ import org.zebrafish.util.ChartHelper;
  * 
  * @author Max Chu
  * @author Joseph S. Kuo
- * @version $Revision$, $Date$
+ * @version $Revision: 13 $, $Date: 2008-08-27 10:52:14 +0800 (星期三, 27 八月 2008) $
  * @since 0.1
  */
 public abstract class GoogleChart {
