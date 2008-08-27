@@ -140,7 +140,7 @@ public abstract class GoogleChart {
 	}
 
 	/**
-	 * Returns the type of the chart.
+	 * Returns the type of this chart.
 	 * 
 	 * @return the type
 	 */
