@@ -41,7 +41,7 @@ import org.zebrafish.util.ChartHelper;
  * 
  * @author Max Chu
  * @author Joseph S. Kuo
- * @version $Rev$, $Date$
+ * @version $Revision$, $Date$
  * @since 0.1
  */
 public abstract class GoogleChart {
