@@ -43,7 +43,7 @@ import org.zebrafish.util.ChartHelper;
  * @author Joseph S. Kuo
  * @version $Revision$, $Date$
  * @since 0.1
- */
+ */ 
 public abstract class GoogleChart {
 	/** The URL of Google Chart API. */
 	public static final String API_URL = "http://chart.apis.google.com/chart?cht=";
