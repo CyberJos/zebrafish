@@ -1,5 +1,5 @@
 /*
- * $Id: GoogleChart.java 13 2008-08-27 02:52:14Z cyberjos@gmail.com $
+ * $Id$
  *
  * @(#)GoogleChart.java 2008/5/6
  *  
@@ -34,14 +34,14 @@ import java.util.Map;
 import org.apache.commons.lang.Validate;
 import org.zebrafish.feature.Feature;
 import org.zebrafish.util.ChartHelper;
-
+ 
 /**
  * The <code>GoogleChart</code> class is the superclass of all google chart 
  * classes.
  * 
  * @author Max Chu
  * @author Joseph S. Kuo
- * @version $Revision: 13 $, $Date: 2008-08-27 10:52:14 +0800 (星期三, 27 八月 2008) $
+ * @version $Revision: 13 $, $Date$
  * @since 0.1
  */
 public abstract class GoogleChart {
