@@ -41,12 +41,13 @@ import org.zebrafish.util.ChartHelper;
  * 
  * @author Max Chu
  * @author Joseph S. Kuo
- * @version $Revision: 13 $, $Date$
+ * @version $Revision$, $Date$
  * @since 0.1
  */
 public abstract class GoogleChart {
 	/** The URL of Google Chart API. */
-	public static final String API_URL = "http://chart.apis.google.com/chart?cht=";
+	public static final String API_URL 
+			= "http://chart.apis.google.com/chart?cht=";
 
 	private int width;
 
@@ -69,7 +70,8 @@ public abstract class GoogleChart {
 	 * @throws IllegalArgumentException if the given width or height is illegal
 	 */
 	public GoogleChart(int width, int height) {
-		Validate.isTrue(ChartHelper.checkSize(width, height), "Illegal size.");
+		Validate.isTrue(ChartHelper.checkSize(width, height),
+				"Illegal image size.");
 		this.width = width;
 		this.height = height;
 	}
@@ -113,7 +115,8 @@ public abstract class GoogleChart {
 	 * @throws IllegalArgumentException if the given feature class is null
 	 */
 	public void removeFeature(String parameterName) {
-		Validate.notNull(parameterName, "The given parameter name must not be null.");
+		Validate.notNull(parameterName, 
+				"The given parameter name must not be null.");
 		if (featureMap != null) {
 			featureMap.remove(parameterName);
 		}
