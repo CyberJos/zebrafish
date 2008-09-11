@@ -33,6 +33,7 @@ import java.util.Map;
 
 import org.apache.commons.lang.Validate;
 import org.zebrafish.feature.Feature;
+import org.zebrafish.feature.Title;
 import org.zebrafish.util.ChartHelper;
  
 /**

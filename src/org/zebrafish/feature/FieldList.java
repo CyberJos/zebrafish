@@ -115,7 +115,7 @@ public interface FieldList<T extends Field> extends Feature, Iterable<T> {
 	 *  
 	 * Lists will refuse to remove null fields.
 	 * 
-	 * @param index field to be removed from this list, if present 
+	 * @param field the field to be removed from this list, if present 
 	 * @return true if this list contained the specified element 
 	 */
 	public boolean remove(T field);

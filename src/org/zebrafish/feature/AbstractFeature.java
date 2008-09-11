@@ -35,7 +35,6 @@ import org.zebrafish.util.Separator;
  * 
  * @author Joseph S. Kuo
  * @version $Revision$, $Date$
- * @param <T> type extended from <code>Field</code> 
  * @since 0.1
  */
 public abstract class AbstractFeature implements Feature {

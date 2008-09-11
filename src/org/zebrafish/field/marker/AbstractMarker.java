@@ -97,7 +97,7 @@ public abstract class AbstractMarker implements Marker {
 	 * Returns the URL string of this field. If color is null, it will return
 	 * an empty string. Or it will create a new <code>StringBuffer</code>
 	 * object which contains {@link #getType()}, "," and 
-	 * {@link #getColor()#toURLString()}, then invoke 
+	 * {@link Color#toURLString()}, then invoke 
 	 * {@link #toURLString(StringBuffer)} and return 
 	 * <code>StringBuffer.toString()</code>.
 	 * 

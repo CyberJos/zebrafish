@@ -51,7 +51,7 @@ public class Color implements Field {
 	/**
 	 * Constructs a <code>Color</code> object with the specified color value.
 	 * 
-	 * @param text a 6-letter or 8-letter string of hexadecimal value
+	 * @param value a 6-letter or 8-letter string of hexadecimal value
 	 * @throws IllegalArgumentException if the given value is illegal
 	 */
 	public Color(String value) {

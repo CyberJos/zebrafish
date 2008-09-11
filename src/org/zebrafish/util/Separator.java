@@ -82,7 +82,7 @@ public enum Separator {
 	 * 
 	 * @return the symbol character
 	 */
-	public char getChar() {
+	public char getSymbol() {
 		return symbol.charAt(0);
 	}
 }

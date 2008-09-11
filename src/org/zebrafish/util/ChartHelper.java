@@ -94,8 +94,8 @@ public class ChartHelper {
 	/**
 	 * Encodes data.
 	 * 
-	 * @param dataList
-	 * @return
+	 * @param dataList the data list needed to be encoded
+	 * @return an encoded string
 	 */
 	public static String encodeData(DataList dataList) {
 		StringBuffer sb = new StringBuffer(128);
@@ -145,10 +145,10 @@ public class ChartHelper {
 	/**
 	 * Scales the given array automatically.
 	 * 
-	 * @param array 
-	 * @param start 
-	 * @param end 
-	 * @return 
+	 * @param array the array needed to be scaled
+	 * @param start the start of the range
+	 * @param end the end of the range
+	 * @return an scaled array
 	 */
 	public static float[] autoDataScale(float[] array, int start, int end) {
 		if (ArrayUtils.isEmpty(array)) {
