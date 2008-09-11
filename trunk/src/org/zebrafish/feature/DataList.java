@@ -95,7 +95,7 @@ public class DataList extends AbstractFieldList<Data> {
 		}
 
 		sb.append(ChartHelper.encodeData(this));
-		if (sb.charAt(sb.length() - 1) == type.getSeparator().getChar()) {
+		if (sb.charAt(sb.length() - 1) == type.getSeparator().getSymbol()) {
 			sb.deleteCharAt(sb.length() - 1);
 		}
 		return sb.toString();

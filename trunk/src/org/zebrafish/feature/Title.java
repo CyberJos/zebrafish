@@ -112,7 +112,7 @@ public class Title extends AbstractFeature {
 	/**
 	 * Sets the color of this title.
 	 *  
-	 * @param the color of this title
+	 * @param color the color of this title
 	 */
 	public void setColor(Color color) {
 		this.color = color;

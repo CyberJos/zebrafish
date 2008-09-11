@@ -142,7 +142,7 @@ public abstract class AbstractFieldList<T extends Field>
 			}
 		}
 
-		return sb.charAt(sb.length() - 1) == Separator.EQUAL.getChar() 
+		return sb.charAt(sb.length() - 1) == Separator.EQUAL.getSymbol() 
 				? StringUtils.EMPTY 
 				: sb.deleteCharAt(sb.length() - 1).toString();
 	}
