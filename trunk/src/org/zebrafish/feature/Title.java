@@ -97,7 +97,7 @@ public class Title extends AbstractFeature {
 	 * @param fontSize the font size of this title
 	 */
 	public void setFontSize(int fontSize) {
-		this.fontSize = fontSize > 0 ? fontSize : DEFAULT_TITLE_FONT_SIZE;
+		this.fontSize = fontSize;
 	}
 
 	/**
@@ -129,7 +129,7 @@ public class Title extends AbstractFeature {
 			sb.append("&chts=")
 				.append(color != null ? color.toURLString() : DEFAULT_TITLE_COLOR)
 				.append(Separator.COMMA)
-				.append(fontSize);
+				.append(fontSize > 0 ? fontSize : DEFAULT_TITLE_FONT_SIZE);
 		}
 		return sb.toString();
 	}
