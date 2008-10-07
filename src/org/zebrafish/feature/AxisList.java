@@ -85,7 +85,7 @@ public class AxisList extends AbstractFieldList<Axis> {
 				// style
 				Color color = axis.getColor();
 				if (axis.getColor() != null) {
-					styleSB.append(idx).append(",").append(color).append(",")
+					styleSB.append(idx).append(",").append(color.toURLString()).append(",")
 						.append(axis.getFontSize());
 
 					Integer align = axis.getAlignment();

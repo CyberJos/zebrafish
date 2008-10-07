@@ -53,6 +53,8 @@ public class ShapeMarker extends AbstractMarker {
 
 	private Integer priority;
 
+	private String text;
+
 	/**
 	 * Constructs a <code>ShapeMarker</code> object.
 	 * 
@@ -186,6 +188,24 @@ public class ShapeMarker extends AbstractMarker {
 		this.priority = priority <= -1 ? -1 : priority >= 1 ? 1 : 0;
 	}
 
+	/**
+	 * Returns the text. It works when the type is 't'.
+	 * 
+	 * @return the text
+	 */
+	public String getText() {
+		return text == null ? "" : text.trim().replaceAll("\\s+", "+");
+	}
+
+	/**
+	 * Sets the text. It works when the type is 't'.
+	 * 
+	 * @param size the text
+	 */
+	public void setText(String text) {
+		this.text = text;
+	}
+
 	private Float getFixedSize() {
 		if (size != null) {
 			return size;
@@ -204,6 +224,9 @@ public class ShapeMarker extends AbstractMarker {
 	 */
 	@Override
 	protected StringBuffer toURLString(StringBuffer sb) {
+		if ("t".equals(getType())) {
+			sb.insert(1, getText());
+		}
 		return sb.append(",").append(dataSetIndex == null ? 0 : dataSetIndex)
 				.append(",").append(dataPoint).append(",")
 				.append(getFixedSize()).append(",")

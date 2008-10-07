@@ -70,7 +70,7 @@ public class ChartHelper {
 	}
 
 	/**
-	 * Checks if the given width and height are legal values for Map Chart.
+	 * Checks if the given width and height are legal values for Maps.
 	 * 
 	 * @param width the width
 	 * @param height the height

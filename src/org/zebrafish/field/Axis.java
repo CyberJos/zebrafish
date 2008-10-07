@@ -201,7 +201,7 @@ public class Axis implements Field {
 	 * @return the font size of axis
 	 */
 	public int getFontSize() {
-		return fontSize;
+		return fontSize <= 0 ? DEFAULT_SIZE : fontSize;
 	}
 
 	/**
@@ -210,7 +210,7 @@ public class Axis implements Field {
 	 * @param fontSize the font size of axis
 	 */
 	public void setFontSize(int fontSize) {
-		this.fontSize = fontSize <= 0 ? DEFAULT_SIZE : fontSize;
+		this.fontSize = fontSize;
 	}
 
 	/**

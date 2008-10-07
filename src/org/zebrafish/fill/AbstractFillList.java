@@ -39,7 +39,7 @@ import org.zebrafish.util.Separator;
  * @version $Revision$, $Date$
  * @since 0.1
  */
-public abstract class AbstractFillList<T extends AbstractFill> extends AbstractFieldList<T> {
+public abstract class AbstractFillList<T extends Fill> extends AbstractFieldList<T> {
 	private String type;
 
 	private Integer angle;
