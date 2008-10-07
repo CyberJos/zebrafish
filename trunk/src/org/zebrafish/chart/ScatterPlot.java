@@ -1,7 +1,7 @@
 /*
  * $Id$
  *
- * @(#)ScatterChart.java 2008/5/24
+ * @(#)ScatterPlot.java 2008/5/24
  *  
  * Copyright (c) 2008 Joseph S. Kuo, Max Chu
  * All Rights Reserved.

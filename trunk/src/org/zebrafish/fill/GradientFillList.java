@@ -53,6 +53,6 @@ public class GradientFillList extends AbstractFillList<GradientFill> {
 	public StringBuffer createStringBuffer() {
 		StringBuffer sb = super.createStringBuffer();
 		return sb.append(getType()).append(",lg,")
-				.append(getAngle()).append(Separator.COLON);
+				.append(getAngle()).append(Separator.COMMA);
 	}
 }

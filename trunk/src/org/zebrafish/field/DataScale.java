@@ -38,7 +38,7 @@ import org.zebrafish.util.Separator;
  * @version $Revision$, $Date$
  * @since 0.1
  */
-public class DataScale  implements Field {
+public class DataScale implements Field {
 	private Integer min;
 
 	private Integer max = new Integer(100); // default

@@ -1,7 +1,7 @@
 /*
  * $Id$
  *
- * @(#)VennChart.java 2008/5/29
+ * @(#)VennDiagram.java 2008/5/29
  *  
  * Copyright (c) 2008 Joseph S. Kuo, Max Chu
  * All Rights Reserved.

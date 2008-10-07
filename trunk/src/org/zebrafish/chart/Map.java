@@ -1,7 +1,7 @@
 /*
  * $Id$
  *
- * @(#)StripeFillList.java Sep 2, 2008
+ * @(#)Map.java 2008/10/3
  *  
  * Copyright (c) 2008 Joseph S. Kuo, Max Chu
  * All Rights Reserved.
@@ -26,33 +26,34 @@
  * --LICENSE NOTICE--
  */
 
-package org.zebrafish.fill;
+package org.zebrafish.chart;
 
-import org.zebrafish.util.Separator;
+import org.apache.commons.lang.Validate;
+import org.zebrafish.util.ChartHelper;
 
 /**
- * Stripe Fill List.
+ * Map.
  * 
- * @author Max Chu
  * @author Joseph S. Kuo
  * @version $Revision$, $Date$
  * @since 0.1
  */
-public class StripeFillList extends AbstractFillList<StripeFill> {
+public class Map extends GoogleChart {
 	/**
-	 * Constructs a <code>StripeFillList</code> object.
+	 * Constructs a <code>VennDiagram</code> with the specified width and 
+	 * height.
 	 * 
-	 * @param type the fill type
-	 * @param angle the angle
+	 * @param width the width in pixels
+	 * @param height the height in pixels
+	 * @throws IllegalArgumentException if the given width or height is illegal
 	 */
-	public StripeFillList(String type, Integer angle) {
-		super(type, angle);
+	public Map(int width, int height) {
+		super(width, height);
+		Validate.isTrue(ChartHelper.checkMapSize(width, height), "Illegal map size.");
 	}
 
 	@Override
-	public StringBuffer createStringBuffer() {
-		StringBuffer sb = super.createStringBuffer();
-		return sb.append(getType()).append(",ls,")
-				.append(getAngle()).append(Separator.COMMA);
+	protected String getChartType() {
+		return "t";
 	}
 }
