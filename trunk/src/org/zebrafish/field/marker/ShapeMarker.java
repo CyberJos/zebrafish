@@ -200,7 +200,7 @@ public class ShapeMarker extends AbstractMarker {
 	/**
 	 * Sets the text. It works when the type is 't'.
 	 * 
-	 * @param size the text
+	 * @param text the text
 	 */
 	public void setText(String text) {
 		this.text = text;
