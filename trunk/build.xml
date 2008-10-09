@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<!-- $Id$ -->
+
+<project name="Zebrafish" default="jar" basedir=".">
+	<property file="build.properties" />
+
+	<property name="name" value="zebrafish" />
+	<property name="Name" value="Zebrafish" />
+	<property name="version" value="0.1" />
+
+	<property name="dir.src" value="src" />
+	<property name="dir.test" value="test" />
+	<property name="dir.build" value="build" />
+	<property name="dir.doc" value="doc" />
+	<property name="dir.lib" value="lib" />
+	<property name="dir.web" value="example" />
+
+	<property name="dir.bin" value="${dir.build}/bin" />
+	<property name="dir.classes" value="${dir.build}/classes" />
+	<property name="dir.api" value="${dir.doc}/api" />
+	<property name="dir.webInf" value="${dir.web}/WEB-INF" />
+	
+	<path id="all.classpath">
+		<fileset dir="${dir.lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="${dir.classes}" failonerror="false" />
+		<delete dir="${dir.bin}" failonerror="false" />
+	</target>
+
+	<target name="compile" depends="clean">
+		<mkdir dir="${dir.classes}" />
+		<javac srcdir="${dir.src}" destdir="${dir.classes}" classpathref="all.classpath"
+				debug="on" target="1.5" debuglevel="lines,vars,source">
+			<compilerarg value="-Xlint:unchecked" />
+		</javac>
+		<copy todir="${dir.classes}">
+			<fileset dir="${dir.src}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="jar" depends="compile">
+		<mkdir dir="${dir.bin}" />
+		<jar jarfile="${dir.bin}/${name}-${version}.jar" basedir="${dir.classes}">
+			<exclude name="*.properties" />
+			<exclude name="**/test/**" />
+		</jar>
+	</target>
+
+	<target name="dist" depends="jar">
+		<tstamp />
+		<zip destfile="../${name}-${version}-${DSTAMP}.zip">
+			<zipfileset dir="." prefix="${name}-${version}">
+				<include name="**" />
+				<exclude name="${dir.build}/**" />
+				<exclude name="**/.*/**" />
+			</zipfileset>
+			<zipfileset dir="${dir.bin}" prefix="${name}-${version}">
+				<include name="*.jar" />
+			</zipfileset>
+		</zip>
+	</target>
+
+	<target name="javadoc">
+		<delete file="**/*.html" failonerror="false" />
+		<delete failonerror="false">
+			<fileset dir="${dir.api}">
+				<include name="**" />
+				<exclude name="**/.*/**" />
+			</fileset>
+		</delete>
+		<javadoc access="public" author="true"
+				classpathref="all.classpath"
+				destdir="${dir.api}"
+				doctitle="${Name} ${version} API"
+				nodeprecated="false"
+				nodeprecatedlist="false"
+				noindex="false"
+				nonavbar="false"
+				notree="false"
+				source="1.5"
+				sourcepath="${dir.src}"
+				splitindex="true"
+				use="true" 
+				version="true"
+				windowtitle="${Name} ${version} API"
+				header="${Name} ${version} API"
+		/>
+    </target>
+</project>
