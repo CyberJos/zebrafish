@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+
+	<tlib-version>1.0</tlib-version>
+	<short-name>zebrafish</short-name>
+	<uri>http://zebrafish.googlecode.com/</uri>
+
+	<tag-file>
+		<name>axis</name>
+		<path>/META-INF/tags/zebrafish/axis.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>axisList</name>
+		<path>/META-INF/tags/zebrafish/axisList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>barChart</name>
+		<path>/META-INF/tags/zebrafish/barChart.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>barWidth</name>
+		<path>/META-INF/tags/zebrafish/barWidth.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>color</name>
+		<path>/META-INF/tags/zebrafish/color.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>colorList</name>
+		<path>/META-INF/tags/zebrafish/colorList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>data</name>
+		<path>/META-INF/tags/zebrafish/data.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>dataList</name>
+		<path>/META-INF/tags/zebrafish/dataList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>dataScale</name>
+		<path>/META-INF/tags/zebrafish/dataScale.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>dataScaleList</name>
+		<path>/META-INF/tags/zebrafish/dataScaleList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>fillAreaMarker</name>
+		<path>/META-INF/tags/zebrafish/fillAreaMarker.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>gradientFill</name>
+		<path>/META-INF/tags/zebrafish/gradientFill.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>gradientFillList</name>
+		<path>/META-INF/tags/zebrafish/gradientFillList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>grid</name>
+		<path>/META-INF/tags/zebrafish/grid.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>legend</name>
+		<path>/META-INF/tags/zebrafish/legend.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>legendList</name>
+		<path>/META-INF/tags/zebrafish/legendList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>legendPosition</name>
+		<path>/META-INF/tags/zebrafish/legendPosition.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>legendPositionList</name>
+		<path>/META-INF/tags/zebrafish/legendPositionList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>lineChart</name>
+		<path>/META-INF/tags/zebrafish/lineChart.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>lineStyle</name>
+		<path>/META-INF/tags/zebrafish/lineStyle.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>lineStyleList</name>
+		<path>/META-INF/tags/zebrafish/lineStyleList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>markerList</name>
+		<path>/META-INF/tags/zebrafish/markerList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>pieChart</name>
+		<path>/META-INF/tags/zebrafish/pieChart.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>pieLegendList</name>
+		<path>/META-INF/tags/zebrafish/pieLegendList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>radarChart</name>
+		<path>/META-INF/tags/zebrafish/radarChart.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>rangeMarker</name>
+		<path>/META-INF/tags/zebrafish/rangeMarker.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>scatterPlot</name>
+		<path>/META-INF/tags/zebrafish/scatterPlot.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>shapeMarker</name>
+		<path>/META-INF/tags/zebrafish/shapeMarker.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>simpleAxis</name>
+		<path>/META-INF/tags/zebrafish/simpleAxis.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>solidFill</name>
+		<path>/META-INF/tags/zebrafish/solidFill.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>solidFillList</name>
+		<path>/META-INF/tags/zebrafish/solidFillList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>sparkline</name>
+		<path>/META-INF/tags/zebrafish/sparkline.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>stripeFill</name>
+		<path>/META-INF/tags/zebrafish/stripeFill.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>stripeFillList</name>
+		<path>/META-INF/tags/zebrafish/stripeFillList.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>title</name>
+		<path>/META-INF/tags/zebrafish/title.tag</path>
+	</tag-file>
+
+	<tag-file>
+		<name>vennDiagram</name>
+		<path>/META-INF/tags/zebrafish/vennDiagram.tag</path>
+	</tag-file>
+</taglib>
