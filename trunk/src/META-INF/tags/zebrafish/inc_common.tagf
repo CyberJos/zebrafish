@@ -1,0 +1,124 @@
+<%!
+	public static final String KEY_ATTR_SET = "_attrSet";
+
+	public static final String KEY_GOOGLE_CHART = "_googleChart";
+
+	public static final String KEY_DATA_LIST = "_dataList";
+
+	public static final String KEY_DATA_SCALE_LIST = "_dataScaleList";
+
+	public static final String KEY_COLOR_LIST = "_colorList";
+
+	public static final String KEY_LEGEND_LIST = "_legendList";
+
+	public static final String KEY_LEGEND_POSITION_LIST = "_legendPositionList";
+
+	public static final String KEY_AXIS_LIST = "_axisList";
+
+	public static final String KEY_SOLID_FILL_LIST = "_solidFillList";
+
+	public static final String KEY_STRIPE_FILL_LIST = "_stripeFillList";
+
+	public static final String KEY_GRADIENT_FILL_LIST = "_gradientFillList";
+
+	public static final String KEY_LINE_STYLE_LIST = "_lineStyleList";
+
+	public static final String KEY_MARKER_LIST = "_markerList";
+
+	boolean isEmpty(String str) {
+		return str == null || str.length() < 1;
+	}
+
+	void setAttribute(ServletRequest request, String name, Object value) {
+		request.setAttribute(name, value);
+		java.util.Set<String> attrSet = getAttribute(request, KEY_ATTR_SET);
+		if(attrSet == null) {
+			attrSet = new java.util.HashSet<String>();
+			request.setAttribute(KEY_ATTR_SET, attrSet);
+		}
+
+		if(!attrSet.contains(name)) {
+			attrSet.add(name);
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	<T> T getAttribute(ServletRequest request, String name) {
+		return (T) request.getAttribute(name);
+	}
+
+	void removeAllAttributes(ServletRequest request) {
+		java.util.Set<String> attrSet = getAttribute(request, KEY_ATTR_SET);
+		if(attrSet != null) {
+			for(String name : attrSet) {
+				request.removeAttribute(name);
+			}
+			request.removeAttribute(KEY_ATTR_SET);
+			attrSet.clear();
+		}
+	}
+
+	<T extends org.zebrafish.feature.Feature> 
+	T loadFeature(ServletRequest request, String key, Class<T> clazz) {
+		T feature = getAttribute(request, key);
+		if(feature == null) {
+			try {
+				feature = clazz.newInstance();
+			} catch (Exception ex) {
+			}
+			setAttribute(request, key, feature);
+		}
+		return feature;
+	}
+
+	void addFeatureIntoChart(ServletRequest request, 
+			org.zebrafish.feature.Feature feature, String key) {
+		org.zebrafish.chart.GoogleChart chart = getAttribute(request, KEY_GOOGLE_CHART);
+		if(chart != null && feature != null) {
+			chart.addFeature(feature);
+		}
+
+		if (key != null) {
+			setAttribute(request, key, null);
+		}
+	}
+
+	String getImageTag(String src, Integer width, Integer height, String alt, 
+			String title, String id, String className, String style) {
+		if (isEmpty(src)) {
+			return "";
+		}
+
+		StringBuffer sb = new StringBuffer(src.length() + 50);
+		sb.append("<img src=\"").append(src)
+			.append("\" width=\"").append(width)
+			.append("\" height=\"").append(height).append("\" ");
+
+		if (!isEmpty(alt)) {
+			sb.append("alt=\"").append(alt).append("\" ");
+		}
+
+		if (!isEmpty(title)) {
+			sb.append("title=\"").append(title).append("\" ");
+		}
+
+		if (!isEmpty(id)) {
+			sb.append("id=\"").append(id).append("\" ");
+		}
+
+		if (!isEmpty(className)) {
+			sb.append("class=\"").append(className).append("\" ");
+		}
+
+		if (!isEmpty(style)) {
+			sb.append("style=\"").append(style).append("\" ");
+		}
+	
+		sb.append("/>");
+		return sb.toString();
+	}
+
+	String getErrorTag(String msg) {
+		return "<span class=\"zebrafish-error\">Error: " + msg + "</span>";
+	}
+%>
